@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Fylo data storage component</title>
+  
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+  
+  @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      width: 100%;
+      height: 100vh;
+      background-color: hsl(229, 57%, 11%);
+    }
+
+    .container{
+      width: 100%;
+      height: 100vh;
+      background-image: url(images/bg-desktop.png);
+      background-position: 0 150%;
+      background-size: 100% ;
+      background-repeat: repeat-x;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      }
+
+      .left{
+        background-color: hsl(228, 56%, 26%);
+        width: 300px;
+        height: 150px;
+        border-radius: 10px 78px 10px 10px;
+        padding: 30px 0 5px 30px;
+        margin: 30px;
+      }
+
+      .left .img img{
+        max-width: 46%;
+      }
+      .left .icons{
+        display: flex;
+        margin-top: 14px;
+        gap: 12px;
+      }
+      .left .icons div{
+        min-width: 7px;
+        min-height: 48px;
+        background-color: hsl(229, 57%, 11%);
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 7px;
+      }
+      
+      .right{
+        width: 465px;
+        height: 120px;
+        background-color: hsl(228, 56%, 26%);
+        border-radius: 10px;
+        font-size: 14px;
+        color: #ffeeffa7;
+        padding: 30px  20px;
+        display: flex;
+        flex-direction: column;
+      }
+      p{
+        padding-left: 30px;
+      }
+      p strong{
+        font-weight: bold;
+        color: antiquewhite;
+      }
+      .right .line{
+        width: 80%;
+        height: 20%;
+        border-radius: 15px;
+        background-color: hsl(229, 57%, 11%);
+        align-self: center;
+        margin-top: 20px;
+        padding: 1px;
+      }
+     .line .pro{
+        width: 80%;
+        height: 100%;
+        border-radius: 15px;
+        background-image: linear-gradient(to left,hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+      }
+      .pro .image{
+        width: 10px;
+        border-radius: 50%;
+        height: 10px;
+        float: right;
+        padding-right: 2px;
+      }
+      .pro .image img{
+        width: 100%;
+        height: 100%;
+       display: block;
+      }
+      .lim{
+        width: 80%;
+        margin: 8px auto;
+        display: flex;
+        justify-content: space-between;
+      }
+      .lim span , .lim p{
+        font-weight: 600;
+      }
+
+      .bubble p, .bubble span{
+        display: inline;
+      }
+      .bubble p span{
+        font-size: 10px;
+        font-family:sans-serif;
+        color: gray;
+        font-weight: 900;
+        line-height: 30px;
+        
+      }
+      .bubble p{
+        font-size: 30px;
+        font-weight: 900;
+        font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+      }
+      
+        
+      .bubble{
+        background-color: #ffff;
+        min-width: 12%;
+        border-radius: 9px 9px 0 9px;
+        height: 10%;
+        position: absolute;
+        top: 33%;
+        left: 67%;
+        display: flex;
+        align-items: center;
+      }
+      .tr{
+        position: absolute;
+        top: -79%;
+        left: 75.030%;
+        background-color: #ffff;
+        width: 20px;
+        height: 30px;
+        
+        transform: skew(-7deg,49deg) translate(20.4px,52px);
+      }
+
+      
+      
+      @media (max-width:500px){
+        .tr{
+          display: none;
+        }
+        .container{
+          align-content: center;
+          background-image: url(images/bg-mobile.png);
+          background-size: cover;
+        }
+        .bubble{
+          top: 73%;
+          left: 34%;
+          width: 35%;
+          border-radius: 12px;
+          height: 8%;
+        }
+        .left{
+          width: 450px;
+        }
+        .right{
+          height: 150px;
+          padding: 30px 25px;
+          font-size: 16px;
+          width: 400px;
+        }
+        .line .image{
+          width: 14px;
+          height: 14px;        
+        }
+        .line .image img{
+          width: 111%;
+        }
+        .text{
+          text-align: center;
+          margin: 0 auto 0 10%;
+        }
+      }
+
+    
+  </style>
+</head>
+<body>
+
+  <div class="bubble">
+    <div class="tr"></div>
+    <p>185 <span> GB  left</span></p>
+  </div>
+  <div class="container">
+    <div class="left">
+      <div class="img">
+        <img src="images/logo.svg" alt="logo">
+      </div>
+        <div class="icons">
+          <div><img src="images/icon-document.svg" alt="doc"></div>
+          <div><img src="images/icon-folder.svg" alt="folder"></div>
+          <div><img src="images/icon-upload.svg" alt="upload"></div>
+        </div>
+    </div>
+<!-- ======================================================= -->
+    <div class="right">
+      <div class="text">
+        <p>You‘ve used <strong>815 GB</strong> of your storage</p>
+      </div>
+      <div class="line">
+        <div class="pro">
+          <div class="image">
+            <img src="images/favicon-32x32.png" alt="circle">
+          </div>
+        </div>
+      </div>
+      <div class="lim">
+        <span>0 GB</span>
+        <p>1000 GB</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">ALI-cmd-front-developer</a>.
+  </div>
+</body>
+</html>
